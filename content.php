@@ -1,0 +1,391 @@
+<main class="main">
+    <!-- Хлебные крошки -->
+    <div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <ul class="container breadcrumbs__list">
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrumbs__link" href="/" itemprop="item">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <use href="images/sprite.svg#icon-home" />
+                    </svg>
+                    <span itemprop="name">Главная</span>
+                </a>
+                <meta itemprop="position" content="1">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <use href="images/sprite.svg#breadcrumbs-divider" />
+                </svg>
+            </li>
+
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrumbs__link" href="/services/" itemprop="item">
+                    <span itemprop="name">Услуги</span>
+                </a>
+                <meta itemprop="position" content="2">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <use href="images/sprite.svg#breadcrumbs-divider" />
+                </svg>
+            </li>
+
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a class="breadcrumbs__link" href="/services/" itemprop="item">
+                    <span itemprop="name">Создание сайтов</span>
+                </a>
+                <meta itemprop="position" content="3">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <use href="images/sprite.svg#breadcrumbs-divider" />
+                </svg>
+            </li>
+
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span class="breadcrumbs__link breadcrumbs__link--active" itemprop="name">Сайт+SEO</span>
+                <meta itemprop="position" content="4">
+            </li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero__content">
+            <h1 class="hero__h1">
+                Создание сайта под ключ<br>
+                с SEO-продвижением
+            </h1>
+            <p class="hero__desc">
+                Разработка сайтов с учётом требований по SEO-продвижению с гарантией топовых позиций в поиске.
+                Создаём веб-проекты, которые максимально быстро занимают верхние позиции в поисковиках. Проводим
+                оптимизацию перед запуском, чтобы вам не приходилось менять контент и мета-теги после старта.
+            </p>
+            <div class="hero__buttons">
+                <button class="default-button hero__button">Заказать</button>
+                <a class="hero__link" href="">
+                    <span>Рассчитать стоимость</span>
+                    <svg width="25" height="15" viewBox="0 0 25 15">
+                        <use href="images/sprite.svg#arrow-right" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок "Кому рекомендуем выбрать" -->
+    <section class="audience" id="services">
+        <div class="container audience__content">
+            <h2 class="audience__h2">Кому рекомендуем выбрать создание сайтов<br>
+                с SEO-раскруткой</h2>
+
+            <div class="audience__grid">
+                <div class="default-card audience__card">
+                    <h3 class="audience__h3">Интернет-магазин</h3>
+                    <p class="audience__desc">
+                        Создание и продвижение интернет-магазинов. Проектируем структуру фильтров под нечастотные
+                        запросы. Внедрим умный фильтр для SEO-тегов.
+                    </p>
+                    <picture class="audience__picture">
+                        <source srcset="images/audience/audience-1-mobile.png" media="(max-width:360px)">
+                        <source srcset="images/audience/audience-1-tablet.png" media="(max-width:768px)">
+                        <img class="audience__img" src="images/audience/audience-1.png" alt="Создание и продвижение интернет-магазинов">
+                    </picture>
+                </div>
+
+                <div class="default-card audience__card">
+                    <h3 class="audience__h3">Сфера услуг</h3>
+                    <p class="audience__desc">
+                        Создание и продвижение продающих сайтов. Делаем специализированные сайты под SEO-запросы.
+                        Прорабатываем структуру под гео-запросы.
+                    </p>
+                    <picture class="audience__picture">
+                        <source srcset="images/audience/audience-3-mobile.png" media="(max-width:360px)">
+                        <source srcset="images/audience/audience-2-tablet.png" media="(max-width:768px)">
+                        <img class="audience__img" src="images/audience/audience-2.png" alt="Создание и продвижение продающих сайтов">
+                    </picture>
+                </div>
+
+                <div class="default-card audience__card">
+                    <h3 class="audience__h3">B2B-сайты</h3>
+                    <p class="audience__desc">
+                        Разработка и продвижение сайтов компаний, специализирующихся на предоставлении услуг
+                        корпоративному сегменту.
+                    </p>
+                    <picture class="audience__picture">
+                        <source srcset="images/audience/audience-3-mobile.png" media="(max-width:360px)">
+                        <source srcset="images/audience/audience-3-tablet.png" media="(max-width:768px)">
+                        <img class="audience__img" src="images/audience/audience-3.png" alt="Разработка и продвижение сайтов компаний">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок "Что входит в услугу" -->
+    <section class="services-offer">
+        <div class="container">
+            <h2 class="services-offer__h2">
+                Что входит в услугу по созданию сайта с продвижением в поисковых системах
+            </h2>
+            <p class="services-offer__desc">
+                Мы подходим к проекту комплексно: создание и оптимизация сайта идут параллельно, чтобы ваш ресурс сразу
+                после запуска был готов привлекать органический трафик. Все работы разделены на два взаимосвязанных
+                стека.
+            </p>
+
+            <ul class="services-offer__grid">
+                <li class="default-card services-offer__card">
+                    <h3 class="services-offer__h3">
+                        Стек 1: Разработка
+                    </h3>
+                    <p class="services-offer__text">
+                        Закладываем технический фундамент, от которого зависит скорость, стабильность и дальнейшая
+                        масштабируемость ресурса. Оптимизация и разработка сайтов для нас — это не просто код,
+                        а продуманная архитектура.
+                    </p>
+                    <h4>
+                        Бэкенд:
+                    </h4>
+                    <ul>
+                        <li>
+                            Проектируем структуру базы данных.
+                        </li>
+                        <li>
+                            Настраиваем серверную часть под высокие нагрузки.
+                        </li>
+                        <li>
+                            Реализуем гибкую систему управления контентом.
+                        </li>
+                    </ul>
+                    <h4>
+                        Вёрстка:
+                    </h4>
+                    <ul>
+                        <li>
+                            Верстаем сайт по стандартам HTML5/CSS3 — поисковые роботы легко считывают структуру
+                            страницы.
+                        </li>
+                        <li>
+                            Адаптируем интерфейс под все устройства — мобильная версия проходит проверку Google
+                            Mobile-Friendly, что положительно влияет на ранжирование.
+                        </li>
+                        <li>
+                            Оптимизируем фронтенд-код для высокой скорости загрузки.
+                        </li>
+                    </ul>
+                </li>
+                <li class="default-card services-offer__card">
+                    <h3 class="services-offer__h3">
+                        Стек 2: SEO-оптимизация
+                    </h3>
+                    <p class="services-offer__text">
+                        Параллельно с разработкой мы проводим SEO-оптимизацию сайта под ключ.
+                    </p>
+                    <ul>
+                        <li>
+                            Собираем семантическое ядро, анализируем поисковые запросы вашей тематики, отбираем
+                            релевантные ключевые слова.
+                        </li>
+                        <li>
+                            Группируем запросы по смыслу и распределяем по страницам сайта, чтобы каждая отвечала на
+                            конкретный запрос пользователя.
+                        </li>
+                        <li>
+                            Составляем Robots.txt — закрываем от индексации служебные страницы и открываем важный
+                            контент.
+                        </li>
+                        <li>
+                            Генерируем карту сайта (Sitemap.xml) для ускорения индексации новых страниц и отслеживания
+                            структуры ресурса поисковиками.
+                        </li>
+                        <li>
+                            Размечаем контент через Schema.org, чтобы повысить кликабельность.
+                        </li>
+                        <li>
+                            Настраиваем ссылки в соцсетях через Open Graph.
+                        </li>
+                        <li>
+                            Настраиваем 301-редиректы для сохранения ссылочного веса.
+                        </li>
+                        <li>
+                            Настраиваем 301-редиректы для сохранения ссылочного веса.
+                        </li>
+                        <li>
+                            Формируем понятные человеку адреса страниц — это улучшает восприятие ссылки и ранжирование.
+                        </li>
+                        <li>
+                            Указываем канонические адреса через Canonical.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+
+    <!-- Кейсы и проекты -->
+    <section class="cases" id="cases">
+        <div class="container cases__content">
+            <h2 class="cases__h2">Кейсы и проекты</h2>
+            <p class="cases__desc">
+                Помогаем бизнесам решать задачи максимально эффективно 
+            </p>
+            <a class="default-button cases__all" href="">Смотреть все кейсы</a>
+
+            <div class="cases__slider swiper" id="casesSlider">
+                <div class="cases__wrapper swiper-wrapper">
+                    <div class="cases__slide swiper-slide">
+                        <h3 class="cases__h3">Автоматизация процессов для строительной компании</h3>
+                        <p class="cases__tag">Автоматизация</p>
+                    </div>
+                    <div class="cases__slide swiper-slide cases__slide_big">
+                        <h3 class="cases__h3">Стройхолдинг</h3>
+                        <p class="cases__tag">Корпоративные порталы</p>
+                        <p class="cases__desc">Ускорили выполнение задач строительной компании на 20%.</p>
+                        <a href="">
+                            <span>
+                                Читать кейс
+                            </span>
+                            <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.20298 0.20752L5.89048 4.89502C5.95603 4.96034 6.00804 5.03796 6.04353 5.12343C6.07901 5.20889 6.09728 5.30053 6.09728 5.39307C6.09728 5.48561 6.07901 5.57724 6.04353 5.66271C6.00804 5.74817 5.95603 5.82579 5.89048 5.89111L1.20298 10.5786C1.07089 10.7107 0.891734 10.7849 0.704931 10.7849C0.518127 10.7849 0.338974 10.7107 0.206884 10.5786C0.0747934 10.4465 0.000586042 10.2674 0.000586032 10.0806C0.000586022 9.89376 0.0747934 9.71461 0.206884 9.58252L4.39692 5.39248L0.206298 1.20244C0.0742074 1.07035 -4.32468e-07 0.891199 -4.40633e-07 0.704395C-4.48799e-07 0.517591 0.0742074 0.338439 0.206298 0.206348C0.338388 0.0742588 0.517541 4.95684e-05 0.704345 4.95603e-05C0.891148 4.95521e-05 1.0703 0.0742588 1.20239 0.206348L1.20298 0.20752Z" fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="cases__slide swiper-slide">
+                        <h3 class="cases__h3">Автоматизация процессов для строительной компании</h3>
+                        <p class="cases__tag">Автоматизация</p>
+                    </div>
+                    <div class="cases__slide swiper-slide cases__slide_big">
+                        <h3 class="cases__h3">Стройхолдинг</h3>
+                        <p class="cases__tag">Корпоративные порталы</p>
+                        <p class="cases__desc">Ускорили выполнение задач строительной компании на 20%.</p>
+                        <a href="">
+                            <span>
+                                Читать кейс
+                            </span>
+                            <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.20298 0.20752L5.89048 4.89502C5.95603 4.96034 6.00804 5.03796 6.04353 5.12343C6.07901 5.20889 6.09728 5.30053 6.09728 5.39307C6.09728 5.48561 6.07901 5.57724 6.04353 5.66271C6.00804 5.74817 5.95603 5.82579 5.89048 5.89111L1.20298 10.5786C1.07089 10.7107 0.891734 10.7849 0.704931 10.7849C0.518127 10.7849 0.338974 10.7107 0.206884 10.5786C0.0747934 10.4465 0.000586042 10.2674 0.000586032 10.0806C0.000586022 9.89376 0.0747934 9.71461 0.206884 9.58252L4.39692 5.39248L0.206298 1.20244C0.0742074 1.07035 -4.32468e-07 0.891199 -4.40633e-07 0.704395C-4.48799e-07 0.517591 0.0742074 0.338439 0.206298 0.206348C0.338388 0.0742588 0.517541 4.95684e-05 0.704345 4.95603e-05C0.891148 4.95521e-05 1.0703 0.0742588 1.20239 0.206348L1.20298 0.20752Z" fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="cases__nav cases__nav--prev">
+                    <svg><!-- иконка стрелки --></svg>
+                </div>
+                <div class="cases__nav cases__nav--next">
+                    <svg><!-- иконка стрелки --></svg>
+                </div>
+                <div class="cases__pagination swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="faq__h2">Часто задаваемые вопросы</h2>
+            <p class="faq__desc">Собрали ответы на самые частые вопросы наших клиентов</p>
+            <a class="faq__all" href="">
+                <span>
+                    Читать все ответы на вопросы
+                </span>
+                <svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.7071 8.07112C25.0976 7.6806 25.0976 7.04743 24.7071 6.65691L18.3431 0.292946C17.9526 -0.0975785 17.3195 -0.0975785 16.9289 0.292946C16.5384 0.68347 16.5384 1.31664 16.9289 1.70716L22.5858 7.36401L16.9289 13.0209C16.5384 13.4114 16.5384 14.0446 16.9289 14.4351C17.3195 14.8256 17.9526 14.8256 18.3431 14.4351L24.7071 8.07112ZM0 7.36401V8.36401H24V7.36401V6.36401H0V7.36401Z" fill="#1E1E1E" />
+                </svg>
+            </a>
+
+            <div class="faq__accordion">
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3 class="faq__h3">Чем SEO-сайт отличается от обычного?</h3>
+                        <svg width="24" height="24" class="icon">
+                            <use href="images/sprite.svg#plus-minus" />
+                        </svg>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            SEO-сайт изначально проектируется с учётом требований поисковых систем: чистый код,
+                            правильная иерархия заголовков, оптимизированные мета-теги и высокая скорость загрузки. В
+                            отличие от обычного сайта, где оптимизацию часто добавляют постфактум, здесь SEO-параметры
+                            закладываются уже на этапе прототипирования. Это позволяет избежать дорогостоящих доработок
+                            после запуска и быстрее выйти в топ поиска. Такой ресурс лучше индексируется, получает
+                            больше органического трафика и демонстрирует высокую конверсию. Вы получаете готовый
+                            маркетинговый актив.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3 class="faq__h3">Нужно ли платить за ссылки?</h3>
+                        <svg width="24" height="24" class="icon minus">
+                            <use href="images/sprite.svg#plus-minus" />
+                        </svg>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            Нужно ли платить за ссылки?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3 class="faq__h3">Что такое SEO-структура?</h3>
+                        <svg width="24" height="24">
+                            <use href="images/sprite.svg#plus-minus" />
+                        </svg>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            Что такое SEO-структура?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <div class="faq__question">
+                        <h3 class="faq__h3">Сколько стоит создание и продвижение сайта?</h3>
+                        <svg width="24" height="24">
+                            <use href="images/sprite.svg#plus-minus" />
+                        </svg>
+                    </div>
+                    <div class="faq__answer">
+                        <p>
+                            Сколько стоит создание и продвижение сайта?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма -->
+    <section class="callback">
+        <div class="container callback__container">
+            <div class="callback__content">
+                <h2 class="callback__h2">Получите коммерческое предложение</h2>
+                <p class="callback__desc">Закажите предварительный SEO-аудит вашей ниши и КП на разработку</p>
+            </div>
+
+            <form class="callback__form" id="callbackForm">
+                <div class="callback__form-group">
+                    <input type="text" id="name" name="name" class="callback__input" placeholder="Ваше имя" required>
+                    <div class="error-message" id="name-error"></div>
+                </div>
+
+                <div class="callback__form-group">
+                    <input type="tel" id="phone" name="phone" class="callback__input" placeholder="Телефон" required>
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+
+                <div class="callback__form-group">
+                    <input type="url" id="website" name="website" class="callback__input" placeholder="Ссылка на сайт">
+                    <div class="error-message" id="website-error"></div>
+                </div>
+
+                <div class="callback__checkbox">
+                    <input type="checkbox" id="agree" required>
+                    <label for="agree">Я согласен на обработку персональных данных</label>
+                    <div class="error-message" id="agree-error"></div>
+                </div>
+
+                <button type="submit" class="btn btn--primary callback__submit">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+</main>

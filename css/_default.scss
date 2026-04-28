@@ -1,0 +1,50 @@
+/* icon accordion */
+
+.icon {
+  stroke: #34AE6B;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon .v-line {
+  opacity: 1;
+}
+
+.icon.minus .v-line {
+  opacity: 0;
+}
+
+.icon.minus {
+  stroke: #1E1E1E;
+  stroke-width: 1.5;
+}
+
+
+section>div>h2 {
+  font-family: var(--font-family-regular);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 130%;
+  color: #1e1e1e;
+}
+
+.default-button {
+  padding: 16px 20px;
+  font-family: var(--font-family-semibold);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 110%;
+  color: var(--white);
+  border-radius: 60px;
+  background-color: var(--brand-green);
+}
+
+.default-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 30px 24px 30px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 25px 0 rgba(1, 8, 3, 0.08);
+  background-color: var(--white)
+}
