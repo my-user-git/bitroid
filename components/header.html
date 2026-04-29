@@ -1,38 +1,103 @@
 <!-- Bitrix: компонент header -->
 <header class="header" id="header">
-    <div class="container header__container">
+    <div class="container header__content">
         <a href="/" class="header__logo">
-            <img src="images/logo.svg" alt="WebStudio" class="header__logo-img" width="180" height="40">
+            <img src="images/logo.png" alt="WebStudio" class="header__logo-img" width="198" height="64">
         </a>
-        
+
         <nav class="header__nav" id="mainNav">
             <ul class="header__menu">
-                <li class="header__menu-item"><a href="#services" class="header__menu-link">Услуги</a></li>
-                <li class="header__menu-item"><a href="#cases" class="header__menu-link">Кейсы</a></li>
-                <li class="header__menu-item"><a href="#faq" class="header__menu-link">FAQ</a></li>
-                <li class="header__menu-item"><a href="#contacts" class="header__menu-link">Контакты</a></li>
+                <li class="header__menu-item">
+                    <a href="#services" class="header__menu-link">
+                        <span>
+                            Услуги
+                        </span>
+                        <svg width="11" height="7" viewBox="0 0 11 7">
+                            <use href="images/sprite.svg#arrow-down" />
+                        </svg>
+                    </a>
+                    <ul class="default-card header__submenu">
+                        <li class="header__submenu-item">
+                            <a href="">Интернет-магазин</a>
+                        </li>
+                        <li class="header__submenu-item">
+                            <a href="">Сфера услуг</a>
+                        </li>
+                        <li class="header__submenu-item">
+                            <a href="">B2B сайты</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#products" class="header__menu-link">
+                        <span>
+                            Продукты
+                        </span>
+                        <svg width="11" height="7" viewBox="0 0 11 7">
+                            <use href="images/sprite.svg#arrow-down" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#solutions" class="header__menu-link">
+                        <span>
+                            Готовые решения
+                        </span>
+                        <svg width="11" height="7" viewBox="0 0 11 7">
+                            <use href="images/sprite.svg#arrow-down" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#cases" class="header__menu-link">
+                        <span>
+                            Кейсы и проекты
+                        </span>
+                        <svg width="11" height="7" viewBox="0 0 11 7">
+                            <use href="images/sprite.svg#arrow-down" />
+                        </svg>
+                    </a>
+                    <ul class="default-card header__submenu">
+                        <li class="header__submenu-item">
+                            <a href="">Автоматизация проектов для строительной компании</a>
+                        </li>
+                        <li class="header__submenu-item">
+                            <a href="">Интерннт-магазин парфюмерии</a>
+                        </li>
+                        <li class="header__submenu-item">
+                            <a href="">Он-лайн кинотеатр</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#contacts" class="header__menu-link">
+                        <span>
+                            О нас
+                        </span>
+                        <svg width="11" height="7" viewBox="0 0 11 7">
+                            <use href="images/sprite.svg#arrow-down" />
+                        </svg>
+                    </a>
+                </li>
             </ul>
         </nav>
-        
-        <div class="header__search">
-            <button class="header__search-btn" id="searchBtn" aria-label="Поиск">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"/>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                </svg>
-            </button>
-            <div class="header__search-form" id="searchForm">
-                <input type="text" placeholder="Поиск..." class="header__search-input">
-                <button class="header__search-close">✕</button>
-            </div>
-        </div>
-        
-        <button class="header__btn" id="callbackBtn">Заказать звонок</button>
-        
+
+
+        <button class="header__search" id="searchBtn" aria-label="Поиск">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <use href="images/sprite.svg#icon-search" />
+            </svg>
+        </button>
+
+
+        <a class="header__tel" href="tel:+74954142808">+7 (495) 414 28 08</a>
+
+        <button class="default-button header__button" id="callbackBtn">Обсудить проект</button>
+
         <button class="header__burger" id="burgerBtn" aria-label="Меню">
-            <span></span>
-            <span></span>
-            <span></span>
+            <svg width="19" height="15" viewBox="0 0 19 15">
+                <use href="images/sprite.svg#burger" />
+            </svg>
         </button>
     </div>
 </header>

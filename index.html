@@ -1,451 +1,768 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Создание сайтов под ключ. Профессиональная разработка сайтов любой сложности. Адаптивный дизайн, высокая скорость загрузки, SEO-оптимизация.">
-    <meta name="author" content="WebStudio">
-    <meta name="robots" content="index, follow">
-    
-    <title>Bitroid | Создание сайтов под ключ</title>
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/main.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    
-    <!-- Schema.org микроразметка -->
-    <script type="application/ld+json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Профессиональная разработка сайтов и интеграций на платформе 1С-Битрикс. Создание интернет-магазинов, корпоративных порталов, CRM-интеграция.">
+  <meta name="keywords" content="разработка сайтов, битрикс, интеграция, интернет-магазин, Чебоксары">
+  <meta name="author" content="Bitroid">
+
+  <title>Bitroid | Разработка сайтов на 1С-Битрикс</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/swiper-bundle-min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Schema.org микроразметка -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "WebStudio",
-      "url": "https://webstudio.ru",
-      "logo": "https://webstudio.ru/logo.png",
-      "sameAs": [
-        "https://t.me/webstudio",
-        "https://vk.com/webstudio",
-        "https://wa.me/79001234567"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+7-999-123-45-67",
-        "email": "info@webstudio.ru",
-        "contactType": "customer service",
-        "availableLanguage": ["Russian"]
-      },
+      "name": "Bitroid",
+      "legalName": "ООО «Битроид»",
+      "url": "https://bitroid.ru",
+      "logo": "https://bitroid.ru/logo.png",
+      "email": "b24@bitroid.ru",
+      "telephone": "+74954142808",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Москва",
+        "addressLocality": "Чебоксары",
+        "addressRegion": "Чувашская республика",
+        "streetAddress": "ул. Мате Залка, д 10, офис 1",
+        "postalCode": "428038",
         "addressCountry": "RU"
-      }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+7 (495) 414 28 08",
+        "contactType": "customer service",
+        "email": "b24@bitroid.ru",
+        "availableLanguage": ["Russian"]
+      },
+      "sameAs": [
+        "https://t.me/bitroid",
+        "https://vk.com/bitroid"
+      ]
     }
     </script>
-    <script type="application/ld+json">
+
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "WebStudio",
-      "url": "https://webstudio.ru",
+      "name": "Bitroid",
+      "url": "https://bitroid.ru",
+      "description": "Профессиональная разработка сайтов и интеграций на платформе 1С-Битрикс.",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://webstudio.ru/search?q={search_term_string}",
+        "target": "https://bitroid.ru/search/?q={search_term_string}",
         "query-input": "required name=search_term_string"
-      }
+      },
+      "inLanguage": "ru"
     }
     </script>
+
+  <script defer src="js/swiper-bundle-min.js"></script>
+  <script defer src="js/main.js"></script>
+
 </head>
+
 <body class="page">
-    <!-- Bitrix: начало шапки -->
-    <header class="header" id="header">
-        <div class="container header__container">
-            <a href="/" class="header__logo">
-                <img src="images/logo.svg" alt="WebStudio" class="header__logo-img" width="180" height="40">
+  <!-- Bitrix: компонент header -->
+  <header class="header" id="header">
+    <div class="container header__content">
+      <a href="/" class="header__logo">
+        <img src="images/logo.png" alt="WebStudio" class="header__logo-img" width="198" height="64">
+      </a>
+
+      <nav class="header__nav" id="mainNav">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#services" class="header__menu-link">
+              <span>
+                Услуги
+              </span>
+              <svg width="11" height="7" viewBox="0 0 11 7">
+                <use href="images/sprite.svg#arrow-down" />
+              </svg>
             </a>
-            
-            <nav class="header__nav" id="mainNav">
-                <ul class="header__menu">
-                    <li class="header__menu-item"><a href="#services" class="header__menu-link">Услуги</a></li>
-                    <li class="header__menu-item"><a href="#cases" class="header__menu-link">Кейсы</a></li>
-                    <li class="header__menu-item"><a href="#faq" class="header__menu-link">FAQ</a></li>
-                    <li class="header__menu-item"><a href="#contacts" class="header__menu-link">Контакты</a></li>
-                </ul>
-            </nav>
-            
-            <div class="header__search">
-                <button class="header__search-btn" id="searchBtn" aria-label="Поиск">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"/>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                    </svg>
-                </button>
-                <div class="header__search-form" id="searchForm">
-                    <input type="text" placeholder="Поиск..." class="header__search-input">
-                    <button class="header__search-close">✕</button>
-                </div>
+            <ul class="default-card header__submenu">
+              <li class="header__submenu-item">
+                <a href="">Интернет-магазин</a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="">Сфера услуг</a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="">B2B сайты</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu-item">
+            <a href="#products" class="header__menu-link">
+              <span>
+                Продукты
+              </span>
+              <svg width="11" height="7" viewBox="0 0 11 7">
+                <use href="images/sprite.svg#arrow-down" />
+              </svg>
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#solutions" class="header__menu-link">
+              <span>
+                Готовые решения
+              </span>
+              <svg width="11" height="7" viewBox="0 0 11 7">
+                <use href="images/sprite.svg#arrow-down" />
+              </svg>
+            </a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#cases" class="header__menu-link">
+              <span>
+                Кейсы и проекты
+              </span>
+              <svg width="11" height="7" viewBox="0 0 11 7">
+                <use href="images/sprite.svg#arrow-down" />
+              </svg>
+            </a>
+            <ul class="default-card header__submenu">
+              <li class="header__submenu-item">
+                <a href="">Автоматизация проектов для строительной компании</a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="">Интерннт-магазин парфюмерии</a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="">Он-лайн кинотеатр</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu-item">
+            <a href="#contacts" class="header__menu-link">
+              <span>
+                О нас
+              </span>
+              <svg width="11" height="7" viewBox="0 0 11 7">
+                <use href="images/sprite.svg#arrow-down" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <button class="header__search" id="searchBtn" aria-label="Поиск">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <use href="images/sprite.svg#icon-search" />
+        </svg>
+      </button>
+
+
+      <a class="header__tel" href="tel:+74954142808">+7 (495) 414 28 08</a>
+
+      <button class="default-button header__button" id="callbackBtn">Обсудить проект</button>
+
+      <button class="header__burger" id="burgerBtn" aria-label="Меню">
+        <svg width="19" height="15" viewBox="0 0 19 15">
+          <use href="images/sprite.svg#burger" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Хлебные крошки -->
+    <div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <ul class="container breadcrumbs__list">
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a class="breadcrumbs__link" href="/" itemprop="item">
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <use href="images/sprite.svg#icon-home" />
+            </svg>
+            <span itemprop="name">Главная</span>
+          </a>
+          <meta itemprop="position" content="1">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <use href="images/sprite.svg#breadcrumbs-divider" />
+          </svg>
+        </li>
+
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a class="breadcrumbs__link" href="/services/" itemprop="item">
+            <span itemprop="name">Услуги</span>
+          </a>
+          <meta itemprop="position" content="2">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <use href="images/sprite.svg#breadcrumbs-divider" />
+          </svg>
+        </li>
+
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a class="breadcrumbs__link" href="/services/" itemprop="item">
+            <span itemprop="name">Создание сайтов</span>
+          </a>
+          <meta itemprop="position" content="3">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <use href="images/sprite.svg#breadcrumbs-divider" />
+          </svg>
+        </li>
+
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span class="breadcrumbs__link breadcrumbs__link--active" itemprop="name">Сайт+SEO</span>
+          <meta itemprop="position" content="4">
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero__content">
+        <h1 class="hero__h1">
+          Создание сайта под ключ<br>
+          с SEO-продвижением
+        </h1>
+        <p class="hero__desc">
+          Разработка сайтов с учётом требований по SEO-продвижению с гарантией топовых позиций в поиске.
+          Создаём веб-проекты, которые максимально быстро занимают верхние позиции в поисковиках. Проводим
+          оптимизацию перед запуском, чтобы вам не приходилось менять контент и мета-теги после старта.
+        </p>
+        <div class="hero__buttons">
+          <button class="default-button hero__button">Заказать <span>&nbsp;сайт</span></button>
+          <a class="hero__link" href="">
+            <span>Рассчитать стоимость</span>
+            <svg width="25" height="15" viewBox="0 0 25 15">
+              <use href="images/sprite.svg#arrow-right" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок "Кому рекомендуем выбрать" -->
+    <section class="audience" id="services">
+      <div class="container audience__content">
+        <h2 class="audience__h2">Кому рекомендуем выбрать создание сайтов<br>
+          с SEO-раскруткой</h2>
+        <div class="swiper audience__swiper">
+          <div class="swiper-wrapper audience__grid">
+            <div class="swiper-slide default-card audience__card">
+              <h3 class="audience__h3">Интернет-магазин</h3>
+              <p class="audience__desc">
+                Создание и продвижение интернет-магазинов. Проектируем структуру фильтров под нечастотные
+                запросы. Внедрим умный фильтр для SEO-тегов.
+              </p>
+              <picture class="audience__picture">
+                <source srcset="images/audience/audience-1-mobile.png" media="(max-width:576px)">
+                <source srcset="images/audience/audience-1-tablet.png" media="(max-width:768px)">
+                <img class="audience__img" src="images/audience/audience-1.png"
+                  alt="Создание и продвижение интернет-магазинов">
+              </picture>
             </div>
-            
-            <button class="header__btn" id="callbackBtn">Заказать звонок</button>
-            
-            <button class="header__burger" id="burgerBtn" aria-label="Меню">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <div class="swiper-slide default-card audience__card">
+              <h3 class="audience__h3">Сфера услуг</h3>
+              <p class="audience__desc">
+                Создание и продвижение продающих сайтов. Делаем специализированные сайты под SEO-запросы.
+                Прорабатываем структуру под гео-запросы.
+              </p>
+              <picture class="audience__picture">
+                <source srcset="images/audience/audience-2.png" media="(max-width:576px)">
+                <source srcset="images/audience/audience-2-tablet.png" media="(max-width:768px)">
+                <img class="audience__img" src="images/audience/audience-2.png"
+                  alt="Создание и продвижение продающих сайтов">
+              </picture>
+            </div>
+
+            <div class="swiper-slide default-card audience__card">
+              <h3 class="audience__h3">B2B-сайты</h3>
+              <p class="audience__desc">
+                Разработка и продвижение сайтов компаний, специализирующихся на предоставлении услуг
+                корпоративному сегменту.
+              </p>
+              <picture class="audience__picture">
+                <source srcset="images/audience/audience-3.png" media="(max-width:576px)">
+                <source srcset="images/audience/audience-3-tablet.png" media="(max-width:768px)">
+                <img class="audience__img" src="images/audience/audience-3.png"
+                  alt="Разработка и продвижение сайтов компаний">
+              </picture>
+            </div>
+          </div>
+          <div class="audience__pagination swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок "Что входит в услугу" -->
+    <section class="services-offer">
+      <div class="container">
+        <h2 class="services-offer__h2">
+          Что входит в услугу по созданию сайта с продвижением в поисковых системах
+        </h2>
+        <p class="services-offer__desc">
+          Мы подходим к проекту комплексно: создание и оптимизация сайта идут параллельно, чтобы ваш ресурс сразу
+          после запуска был готов привлекать органический трафик. Все работы разделены на два взаимосвязанных
+          стека.
+        </p>
+        <div class="swiper services-offer__swiper">
+          <div class="swiper-wrapper services-offer__grid">
+            <div class="swiper-slide default-card services-offer__card">
+              <h3 class="services-offer__h3">
+                Стек 1: Разработка
+              </h3>
+              <p class="services-offer__text">
+                Закладываем технический фундамент, от которого зависит скорость, стабильность и дальнейшая
+                масштабируемость ресурса. Оптимизация и разработка сайтов для нас — это не просто код,
+                а продуманная архитектура.
+              </p>
+              <h4>
+                Бэкенд:
+              </h4>
+              <ul>
+                <li>
+                  Проектируем структуру базы данных.
+                </li>
+                <li>
+                  Настраиваем серверную часть под высокие нагрузки.
+                </li>
+                <li>
+                  Реализуем гибкую систему управления контентом.
+                </li>
+              </ul>
+              <h4>
+                Вёрстка:
+              </h4>
+              <ul>
+                <li>
+                  Верстаем сайт по стандартам HTML5/CSS3 — поисковые роботы легко считывают структуру
+                  страницы.
+                </li>
+                <li>
+                  Адаптируем интерфейс под все устройства — мобильная версия проходит проверку Google
+                  Mobile-Friendly, что положительно влияет на ранжирование.
+                </li>
+                <li>
+                  Оптимизируем фронтенд-код для высокой скорости загрузки.
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide default-card services-offer__card">
+              <h3 class="services-offer__h3">
+                Стек 2: SEO-оптимизация
+              </h3>
+              <p class="services-offer__text">
+                Параллельно с разработкой мы проводим SEO-оптимизацию сайта под ключ.
+              </p>
+              <ul>
+                <li>
+                  Собираем семантическое ядро, анализируем поисковые запросы вашей тематики, отбираем
+                  релевантные ключевые слова.
+                </li>
+                <li>
+                  Группируем запросы по смыслу и распределяем по страницам сайта, чтобы каждая отвечала на
+                  конкретный запрос пользователя.
+                </li>
+                <li>
+                  Составляем Robots.txt — закрываем от индексации служебные страницы и открываем важный
+                  контент.
+                </li>
+                <li>
+                  Генерируем карту сайта (Sitemap.xml) для ускорения индексации новых страниц и отслеживания
+                  структуры ресурса поисковиками.
+                </li>
+                <li>
+                  Размечаем контент через Schema.org, чтобы повысить кликабельность.
+                </li>
+                <li>
+                  Настраиваем ссылки в соцсетях через Open Graph.
+                </li>
+                <li>
+                  Настраиваем 301-редиректы для сохранения ссылочного веса.
+                </li>
+                <li>
+                  Настраиваем 301-редиректы для сохранения ссылочного веса.
+                </li>
+                <li>
+                  Формируем понятные человеку адреса страниц — это улучшает восприятие ссылки и ранжирование.
+                </li>
+                <li>
+                  Указываем канонические адреса через Canonical.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="services-offer__pagination swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Кейсы и проекты -->
+    <section class="cases" id="cases">
+      <div class="container cases__content">
+        <div class="default-heading cases__heading">
+          <h2 class="cases__h2">Кейсы и проекты</h2>
+          <p class="cases__desc">
+            Помогаем бизнесам решать задачи максимально эффективно 
+          </p>
+          <a class="default-button cases__all" href="">Смотреть все кейсы</a>
+        </div>
+        <div class="cases__wrap">
+          <div class="cases__slider swiper" id="casesSlider">
+            <div class="cases__wrapper swiper-wrapper">
+              <div class="cases__slide swiper-slide">
+                <h3 class="cases__h3">Автоматизация процессов для строительной компании</h3>
+                <p class="cases__tag">Автоматизация</p>
+              </div>
+              <div class="cases__slide swiper-slide cases__slide_big">
+                <h3 class="cases__h3">Стройхолдинг</h3>
+                <p class="cases__tag">Корпоративные порталы</p>
+                <p class="cases__desc-in">Ускорили выполнение задач строительной компании на 20%.</p>
+                <a href="">
+                  <span>
+                    Читать кейс
+                  </span>
+                  <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.20298 0.20752L5.89048 4.89502C5.95603 4.96034 6.00804 5.03796 6.04353 5.12343C6.07901 5.20889 6.09728 5.30053 6.09728 5.39307C6.09728 5.48561 6.07901 5.57724 6.04353 5.66271C6.00804 5.74817 5.95603 5.82579 5.89048 5.89111L1.20298 10.5786C1.07089 10.7107 0.891734 10.7849 0.704931 10.7849C0.518127 10.7849 0.338974 10.7107 0.206884 10.5786C0.0747934 10.4465 0.000586042 10.2674 0.000586032 10.0806C0.000586022 9.89376 0.0747934 9.71461 0.206884 9.58252L4.39692 5.39248L0.206298 1.20244C0.0742074 1.07035 -4.32468e-07 0.891199 -4.40633e-07 0.704395C-4.48799e-07 0.517591 0.0742074 0.338439 0.206298 0.206348C0.338388 0.0742588 0.517541 4.95684e-05 0.704345 4.95603e-05C0.891148 4.95521e-05 1.0703 0.0742588 1.20239 0.206348L1.20298 0.20752Z"
+                      fill="white" />
+                  </svg>
+                </a>
+              </div>
+              <div class="cases__slide swiper-slide">
+                <h3 class="cases__h3">Автоматизация процессов для строительной компании</h3>
+                <p class="cases__tag">Автоматизация</p>
+              </div>
+              <div class="cases__slide swiper-slide cases__slide_big">
+                <h3 class="cases__h3">Стройхолдинг</h3>
+                <p class="cases__tag">Корпоративные порталы</p>
+                <p class="cases__desc-in">Ускорили выполнение задач строительной компании на 20%.</p>
+                <a href="">
+                  <span>
+                    Читать кейс
+                  </span>
+                  <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.20298 0.20752L5.89048 4.89502C5.95603 4.96034 6.00804 5.03796 6.04353 5.12343C6.07901 5.20889 6.09728 5.30053 6.09728 5.39307C6.09728 5.48561 6.07901 5.57724 6.04353 5.66271C6.00804 5.74817 5.95603 5.82579 5.89048 5.89111L1.20298 10.5786C1.07089 10.7107 0.891734 10.7849 0.704931 10.7849C0.518127 10.7849 0.338974 10.7107 0.206884 10.5786C0.0747934 10.4465 0.000586042 10.2674 0.000586032 10.0806C0.000586022 9.89376 0.0747934 9.71461 0.206884 9.58252L4.39692 5.39248L0.206298 1.20244C0.0742074 1.07035 -4.32468e-07 0.891199 -4.40633e-07 0.704395C-4.48799e-07 0.517591 0.0742074 0.338439 0.206298 0.206348C0.338388 0.0742588 0.517541 4.95684e-05 0.704345 4.95603e-05C0.891148 4.95521e-05 1.0703 0.0742588 1.20239 0.206348L1.20298 0.20752Z"
+                      fill="white" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="cases__pagination swiper-pagination"></div>
+          </div>
+          <div class="cases__nav">
+            <div class="cases__nav--prev">
+              <svg width="9" height="15" viewBox="0 0 9 15">
+                <use href="images/sprite.svg#slider-arrow" />
+              </svg>
+            </div>
+            <div class="cases__nav--next">
+              <svg width="9" height="15" viewBox="0 0 9 15">
+                <use href="images/sprite.svg#slider-arrow" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="container faq__content">
+        <div class="default-heading faq__heading">
+          <h2 class="faq__h2">Часто задаваемые вопросы</h2>
+          <p class="faq__desc">Собрали ответы на самые частые вопросы наших клиентов</p>
+          <a class="faq__all" href="">
+            <span>
+              Читать все ответы на вопросы
+            </span>
+            <svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24.7071 8.07112C25.0976 7.6806 25.0976 7.04743 24.7071 6.65691L18.3431 0.292946C17.9526 -0.0975785 17.3195 -0.0975785 16.9289 0.292946C16.5384 0.68347 16.5384 1.31664 16.9289 1.70716L22.5858 7.36401L16.9289 13.0209C16.5384 13.4114 16.5384 14.0446 16.9289 14.4351C17.3195 14.8256 17.9526 14.8256 18.3431 14.4351L24.7071 8.07112ZM0 7.36401V8.36401H24V7.36401V6.36401H0V7.36401Z"
+                fill="#1E1E1E" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="faq__accordion">
+          <div class="default-card faq__item">
+            <h3 class="faq__h3">
+              <button>
+                Чем SEO-сайт отличается от обычного?
+                <svg class="icon-minus" width="14" height="2" viewBox="0 0 14 2">
+                  <use href="images/sprite.svg#icon-minus" />
+                </svg>
+                <svg class="icon-plus" width="16" height="16" viewBox="0 0 16 16">
+                  <use href="images/sprite.svg#icon-plus" />
+                </svg>
+              </button>
+            </h3>
+            <div class="faq__answer">
+              <p>
+                SEO-сайт изначально проектируется с учётом требований поисковых систем: чистый код,
+                правильная иерархия заголовков, оптимизированные мета-теги и высокая скорость загрузки. В
+                отличие от обычного сайта, где оптимизацию часто добавляют постфактум, здесь SEO-параметры
+                закладываются уже на этапе прототипирования. Это позволяет избежать дорогостоящих доработок
+                после запуска и быстрее выйти в топ поиска. Такой ресурс лучше индексируется, получает
+                больше органического трафика и демонстрирует высокую конверсию. Вы получаете готовый
+                маркетинговый актив.
+              </p>
+            </div>
+          </div>
+
+          <div class="default-card faq__item">
+            <h3 class="faq__h3">
+              <button>
+                Нужно ли платить за ссылки?
+                <svg class="icon-minus" width="14" height="2" viewBox="0 0 14 2">
+                  <use href="images/sprite.svg#icon-minus" />
+                </svg>
+                <svg class="icon-plus" width="16" height="16" viewBox="0 0 16 16">
+                  <use href="images/sprite.svg#icon-plus" />
+                </svg>
+              </button>
+
+            </h3>
+            <div class="faq__answer">
+              <p>
+                Нужно ли платить за ссылки?
+              </p>
+            </div>
+          </div>
+
+          <div class="default-card faq__item">
+            <h3 class="faq__h3">
+              <button>
+                Что такое SEO-структура?
+                <svg class="icon-minus" width="14" height="2" viewBox="0 0 14 2">
+                  <use href="images/sprite.svg#icon-minus" />
+                </svg>
+                <svg class="icon-plus" width="16" height="16" viewBox="0 0 16 16">
+                  <use href="images/sprite.svg#icon-plus" />
+                </svg>
+              </button>
+            </h3>
+            <div class="faq__answer">
+              <p>
+                Что такое SEO-структура?
+              </p>
+            </div>
+          </div>
+
+          <div class="default-card faq__item">
+            <h3 class="faq__h3">
+              <button>
+                Сколько стоит создание и продвижение сайта?
+                <svg class="icon-minus" width="14" height="2" viewBox="0 0 14 2">
+                  <use href="images/sprite.svg#icon-minus" />
+                </svg>
+                <svg class="icon-plus" width="16" height="16" viewBox="0 0 16 16">
+                  <use href="images/sprite.svg#icon-plus" />
+                </svg>
+              </button>
+            </h3>
+            <div class="faq__answer">
+              <p>
+                Сколько стоит создание и продвижение сайта?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма -->
+    <section class="container  callback">
+      <div class="callback__content">
+        <div class="callback__wrap">
+          <h2 class="callback__h2">Получите коммерческое предложение</h2>
+          <p class="callback__desc">Закажите предварительный SEO-аудит вашей ниши и КП на разработку</p>
+
+          <form class="callback__form" id="callbackForm">
+            <div class="callback__form-group">
+              <input type="text" id="name" name="name" class="callback__input" placeholder="Ваше имя" required>
+              <div class="error-message" id="name-error"></div>
+            </div>
+
+            <div class="callback__form-group">
+              <input type="tel" id="phone" name="phone" class="callback__input" placeholder="Телефон" required>
+              <div class="error-message" id="phone-error"></div>
+            </div>
+
+            <div class="callback__form-group">
+              <input type="url" id="website" name="website" class="callback__input" placeholder="Ссылка на сайт">
+              <div class="error-message" id="website-error"></div>
+            </div>
+
+            <button type="submit" class="default-button callback__submit">
+              Получить консультацию
             </button>
+
+            <div class="callback__checkbox">
+              <label for="agree">
+                <input type="checkbox" id="agree" required>
+                <span class="checkmark"></span>
+                <span>
+                  Нажимая на кнопку «Отправить», вы соглашаетесь с <a href="">Правилами обработки персональных
+                    данных</a> и <a href=""> Политикой конфиденциальности</a>
+                </span>
+              </label>
+              <div class="error-message" id="agree-error"></div>
+            </div>
+          </form>
         </div>
-    </header>
-    <!-- Bitrix: конец шапки -->
-    
-    <main class="main">
-        <!-- Баннер -->
-        <section class="hero">
-            <div class="container hero__container">
-                <div class="hero__content">
-                    <h1 class="hero__title">Создание сайтов <span class="hero__title-accent">под ключ</span></h1>
-                    <p class="hero__text">Разрабатываем сайты любой сложности: от лендингов до интернет-магазинов. Гарантия качества, индивидуальный подход, SEO-оптимизация из коробки.</p>
-                    <div class="hero__buttons">
-                        <button class="btn btn--primary hero__btn">Узнать стоимость</button>
-                        <button class="btn btn--outline hero__btn-outline">Портфолио</button>
-                    </div>
-                </div>
-                <div class="hero__image">
-                    <img src="images/hero-illustration.svg" alt="Создание сайтов" loading="lazy">
-                </div>
-            </div>
-        </section>
-        
-        <!-- Кому рекомендуем выбрать -->
-        <section class="audience" id="services">
-            <div class="container">
-                <h2 class="section__title">Кому рекомендуем выбрать</h2>
-                <p class="section__subtitle">Наши услуги идеально подходят для бизнеса любого масштаба</p>
-                
-                <div class="audience__grid">
-                    <div class="card audience__card">
-                        <div class="card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="2" y="7" width="20" height="14" rx="2"/>
-                                <line x1="16" y1="21" x2="16" y2="15"/>
-                                <line x1="8" y1="21" x2="8" y2="15"/>
-                                <line x1="9" y1="11" x2="15" y2="11"/>
-                            </svg>
-                        </div>
-                        <h3 class="card__title">Стартапы и малый бизнес</h3>
-                        <p class="card__text">Быстрый старт с лендингом или сайтом-визиткой. Оптимальное решение для выхода на рынок.</p>
-                    </div>
-                    
-                    <div class="card audience__card">
-                        <div class="card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                <polyline points="9 22 9 12 15 12 15 22"/>
-                            </svg>
-                        </div>
-                        <h3 class="card__title">Средний бизнес</h3>
-                        <p class="card__text">Многофункциональные корпоративные сайты с CRM-интеграцией и личными кабинетами.</p>
-                    </div>
-                    
-                    <div class="card audience__card">
-                        <div class="card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="10"/>
-                                <line x1="2" y1="12" x2="22" y2="12"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
-                        </div>
-                        <h3 class="card__title">E-commerce проекты</h3>
-                        <p class="card__text">Профессиональные интернет-магазины с удобной корзиной, фильтрами и оплатой.</p>
-                    </div>
-                    
-                    <div class="card audience__card">
-                        <div class="card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                                <polyline points="3.29 7 12 12 20.71 7"/>
-                                <line x1="12" y1="22" x2="12" y2="12"/>
-                            </svg>
-                        </div>
-                        <h3 class="card__title">Агентства и фрилансеры</h3>
-                        <p class="card__text">Белые метки и готовые решения для перепродажи с полной технической поддержкой.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Что входит в услугу (табы) -->
-        <section class="services-offer">
-            <div class="container">
-                <h2 class="section__title">Что входит в услугу</h2>
-                <p class="section__subtitle">Выберите подходящий тариф и получите полный пакет услуг</p>
-                
-                <div class="tabs">
-                    <div class="tabs__header">
-                        <button class="tabs__btn active" data-tab="basic">Базовый</button>
-                        <button class="tabs__btn" data-tab="optimal">Оптимальный</button>
-                        <button class="tabs__btn" data-tab="premium">Премиум</button>
-                    </div>
-                    
-                    <div class="tabs__content active" id="basic">
-                        <div class="services-offer__grid">
-                            <div class="services-offer__item">
-                                <svg class="services-offer__check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Адаптивный дизайн (до 5 страниц)</span>
-                            </div>
-                            <div class="services-offer__item">
-                                <svg class="services-offer__check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Базовая SEO-оптимизация</span>
-                            </div>
-                            <div class="services-offer__item">
-                                <svg class="services-offer__check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Форма обратной связи</span>
-                            </div>
-                            <div class="services-offer__item">
-                                <svg class="services-offer__check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Подключение аналитики (Яндекс.Метрика)</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="tabs__content" id="optimal">
-                        <div class="services-offer__grid">
-                            <div class="services-offer__item">
-                                <svg class="services-offer__check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Адаптивный дизайн (до 15 страниц)</span>
-                            </div>
-                            <div class="services-offer__item">
-                                <svg class="services-offer__check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Продвинутая SEO-оптимизация</span>
-                            </div>
-                            <div class="services-offer__item">
-                                <svg class="services-offer__check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>CRM-интеграция</span>
-                            </div>
-                            <div class="services-offer__item">
-                                <svg class="services-offer__check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Личный кабинет пользователя</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="tabs__content" id="premium">
-                        <div class="services-offer__grid">
-                            <div class="services-offer__item">
-                                <svg class="services-offer__check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Неограниченное количество страниц</span>
-                            </div>
-                            <div class="services-offer__item">
-                                <svg class="services-offer__check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Интернет-магазин с корзиной и оплатой</span>
-                            </div>
-                            <div class="services-offer__item">
-                                <svg class="services-offer__check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>API-интеграция с 1С и любой системой</span>
-                            </div>
-                            <div class="services-offer__item">
-                                <svg class="services-offer__check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                                <span>Техническая поддержка 24/7</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Кейсы и проекты (слайдер) -->
-        <section class="cases" id="cases">
-            <div class="container">
-                <h2 class="section__title">Кейсы и проекты</h2>
-                <p class="section__subtitle">Наши работы, которыми мы гордимся</p>
-                
-                <div class="cases__slider" id="casesSlider">
-                    <div class="cases__wrapper">
-                        <div class="cases__slide">
-                            <div class="cases__card">
-                                <img src="images/case-1.jpg" alt="Интернет-магазин мебели" class="cases__image" loading="lazy">
-                                <div class="cases__info">
-                                    <h3 class="cases__title">Интернет-магазин мебели</h3>
-                                    <p class="cases__text">Разработка e-commerce платформы с каталогом из 5000+ товаров</p>
-                                    <a href="#" class="cases__link">Подробнее →</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cases__slide">
-                            <div class="cases__card">
-                                <img src="images/case-2.jpg" alt="Корпоративный сайт" class="cases__image" loading="lazy">
-                                <div class="cases__info">
-                                    <h3 class="cases__title">Корпоративный портал</h3>
-                                    <p class="cases__text">Сайт для крупного производственного холдинга</p>
-                                    <a href="#" class="cases__link">Подробнее →</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cases__slide">
-                            <div class="cases__card">
-                                <img src="images/case-3.jpg" alt="Лендинг" class="cases__image" loading="lazy">
-                                <div class="cases__info">
-                                    <h3 class="cases__title">Лендинг для стартапа</h3>
-                                    <p class="cases__text">Конверсия 15% за первый месяц работы</p>
-                                    <a href="#" class="cases__link">Подробнее →</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cases__slide">
-                            <div class="cases__card">
-                                <img src="images/case-4.jpg" alt="Образовательная платформа" class="cases__image" loading="lazy">
-                                <div class="cases__info">
-                                    <h3 class="cases__title">Образовательная платформа</h3>
-                                    <p class="cases__text">Платформа с видео-уроками и личным кабинетом</p>
-                                    <a href="#" class="cases__link">Подробнее →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="cases__nav cases__nav--prev" aria-label="Предыдущий">‹</button>
-                    <button class="cases__nav cases__nav--next" aria-label="Следующий">›</button>
-                    <div class="cases__dots"></div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Часто задаваемые вопросы (аккордеон) -->
-        <section class="faq" id="faq">
-            <div class="container">
-                <h2 class="section__title">Часто задаваемые вопросы</h2>
-                <p class="section__subtitle">Ответы на популярные вопросы о наших услугах</p>
-                
-                <div class="faq__accordion">
-                    <div class="faq__item">
-                        <div class="faq__question">
-                            <span>Сколько времени занимает разработка сайта?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                        </div>
-                        <div class="faq__answer">
-                            <p>Сроки зависят от сложности проекта. Лендинг можно сделать за 7-10 дней, интернет-магазин — от 3 до 8 недель, корпоративный портал — от 4 недель. Точные сроки обсуждаются на старте проекта.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq__item">
-                        <div class="faq__question">
-                            <span>Входит ли SEO-оптимизация в стоимость?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                        </div>
-                        <div class="faq__answer">
-                            <p>Базовая SEO-оптимизация включена во все тарифы. Это правильная структура URL, мета-теги, скорость загрузки, микроразметка. Продвинутая SEO-настройка обсуждается отдельно.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq__item">
-                        <div class="faq__question">
-                            <span>Вы делаете сайты на WordPress или пишете с нуля?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                        </div>
-                        <div class="faq__answer">
-                            <p>Используем современные технологии: React, Vue, чистый PHP/Laravel или готовые CMS по выбору клиента. У каждого подхода свои преимущества — мы предлагаем оптимальное решение под ваши задачи.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="faq__item">
-                        <div class="faq__question">
-                            <span>Предоставляете ли вы гарантию и поддержку после запуска?</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                        </div>
-                        <div class="faq__answer">
-                            <p>Да, мы даём гарантию 3-6 месяцев на все работы и предоставляем техническую поддержку. Также можно заключить договор на пост-релизное обслуживание сайта.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Блок с формой -->
-        <section class="callback">
-            <div class="container callback__container">
-                <div class="callback__content">
-                    <h2 class="callback__title">Оставьте заявку на бесплатную консультацию</h2>
-                    <p class="callback__text">Расскажите о своём проекте, и мы предложим оптимальное решение</p>
-                </div>
-                
-                <form class="callback__form" id="callbackForm">
-                    <div class="callback__form-group">
-                        <input type="text" id="name" name="name" class="callback__input" placeholder="Ваше имя" required>
-                    </div>
-                    <div class="callback__form-group">
-                        <input type="tel" id="phone" name="phone" class="callback__input" placeholder="Телефон" required>
-                    </div>
-                    <div class="callback__form-group">
-                        <input type="email" id="email" name="email" class="callback__input" placeholder="Email" required>
-                    </div>
-                    <div class="callback__form-group">
-                        <textarea id="message" name="message" class="callback__textarea" placeholder="Комментарий к проекту" rows="3"></textarea>
-                    </div>
-                    <div class="callback__checkbox">
-                        <input type="checkbox" id="agree" required>
-                        <label for="agree">Я согласен на обработку персональных данных</label>
-                    </div>
-                    <button type="submit" class="btn btn--primary callback__submit">Отправить заявку</button>
-                </form>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Bitrix: начало подвала -->
-    <footer class="footer" id="contacts">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col">
-                    <h3 class="footer__title">О единой платформе</h3>
-                    <p class="footer__text">Мы создаём современные сайты, которые работают на ваш бизнес. Индивидуальный подход, гарантия качества и полная прозрачность на всех этапах разработки.</p>
-                </div>
-                
-                <div class="footer__col">
-                    <h3 class="footer__title">Контакты</h3>
-                    <ul class="footer__contacts">
-                        <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
-                        <li><a href="mailto:info@webstudio.ru">info@webstudio.ru</a></li>
-                        <li>г. Москва, ул. Тверская, 15</li>
-                    </ul>
-                </div>
-                
-                <div class="footer__col">
-                    <div class="footer__logo">
-                        <img src="images/logo-white.svg" alt="WebStudio" width="150" height="33">
-                    </div>
-                    <div class="footer__social">
-                        <a href="#" class="footer__social-link" aria-label="Telegram">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.084 4.733l-2.454 11.578c-.164.739-.605.914-1.225.569l-3.381-2.492-1.633 1.571c-.179.179-.33.33-.677.33l.242-3.426 6.238-5.637c.27-.242-.06-.378-.419-.135l-7.714 4.859-3.323-1.04c-.723-.226-.737-.723.151-1.071l12.992-5.008c.602-.242 1.128.147.93 1.042z"/></svg>
-                        </a>
-                        <a href="#" class="footer__social-link" aria-label="VK">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.062 7.937c.149-.496 0-.87-.71-.87h-2.404c-.597 0-.87.316-1.023.664 0 0-1.188 2.936-2.877 4.845-.546.546-.795.72-1.092.72-.148 0-.366-.174-.366-.664V7.937c0-.597-.165-.87-.72-.87H9.285c-.398 0-.645.298-.645.58 0 .606.913.745 1.006 2.45v3.692c0 .812-.149 1.008-.463 1.008-.795 0-2.734-2.93-3.86-6.285-.215-.65-.43-.87-1.031-.87H2.363c-.646 0-.78.316-.78.664 0 .62.863 3.688 4.018 7.744 2.1 3.024 5.046 4.665 7.724 4.665 1.614 0 1.81-.364 1.81-.992v-2.286c0-.646.135-.87.578-.87.33 0 .896.166 2.216 1.446 1.511 1.511 1.76 2.186 2.608 2.186h2.404c.646 0 .97-.364.796-1.008-.215-.63-.99-1.544-2.02-2.627-.565-.644-1.412-1.328-1.672-1.676-.363-.43-.26-.62 0-1.008 0 0 2.828-4.02 3.122-5.382z"/></svg>
-                        </a>
-                        <a href="#" class="footer__social-link" aria-label="WhatsApp">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.032 2.018c-5.517 0-9.986 4.469-9.986 9.977 0 1.755.453 3.464 1.318 4.984L2.088 21.98l5.244-1.35c1.457.794 3.111 1.224 4.826 1.224h.01c5.514 0 10.001-4.47 10.001-9.977 0-2.66-1.034-5.159-2.91-7.039-1.882-1.877-4.387-2.91-7.048-2.91h-.199zm0 18.355h-.008c-1.492 0-2.957-.406-4.239-1.168l-.304-.18-3.113.8.83-3.034-.197-.314c-.858-1.35-1.31-2.899-1.31-4.484 0-4.654 3.788-8.441 8.449-8.441 2.253 0 4.37.878 5.96 2.472 1.59 1.594 2.466 3.714 2.466 5.972 0 4.66-3.784 8.44-8.433 8.44zm4.632-6.325c-.254-.127-1.5-.74-1.732-.825-.232-.085-.4-.127-.569.127-.169.254-.654.825-.802.994-.148.169-.296.191-.55.064-.254-.127-1.073-.396-2.043-1.263-.755-.67-1.262-1.496-1.41-1.748-.148-.254-.016-.38.111-.508.114-.114.254-.297.381-.445.127-.148.169-.254.254-.423.085-.169.043-.317-.021-.445-.064-.127-.569-1.372-.78-1.878-.205-.495-.411-.424-.569-.44h-.487c-.169 0-.424.064-.645.317-.22.254-.844.825-.844 2.014 0 1.188.866 2.335.987 2.497.12.169 1.704 2.603 4.128 3.648.577.247 1.026.395 1.376.506.58.185 1.105.157 1.521.094.464-.07 1.43-.585 1.632-1.149.203-.566.203-1.048.142-1.149-.06-.101-.22-.169-.466-.296z"/></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer__col">
-                    <h3 class="footer__title">Меню</h3>
-                    <ul class="footer__menu">
-                        <li><a href="#services">Услуги</a></li>
-                        <li><a href="#cases">Кейсы</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contacts">Контакты</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer__bottom">
-                <p class="footer__copy">© 2026 WebStudio. Все права защищены.</p>
-            </div>
+      </div>
+    </section>
+    <section class="one">
+      <div class="container default-heading">
+        <h2>
+          Единая платформа — максимум<br>эффективности
+        </h2>
+        <p>
+          Забудьте о множестве разрозненных сервисов и приложений.
+        </p>
+        <a class="default-button" href="">Получить консультацию</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bitrix: компонент footer -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__content">
+      <div class="footer__grid">
+
+        <div class="footer__col">
+          <img class="footer__logo" src="images/logo-small.png" alt="Bitroid" width="40" height="40">
+          <ul class="footer__contacts">
+            <li>
+              <a href="tel:+74954142808" class="footer__phone">
+                +7 (495) 414 28 08
+              </a>
+            </li>
+            <li>
+              <a href="mailto:b24@bitroid.ru" class="footer__email">
+                b24@bitroid.ru
+              </a>
+            </li>
+            <li class="footer__address">
+              428038, Чувашская республика, г.&nbsp;Чебоксары, ул.&nbsp;Мате&nbsp;Залка, д&nbsp;10, офис&nbsp;1
+            </li>
+          </ul>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="VK">
+              <img src="images/vk.png" alt="VK">
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Telegram">
+              <img src="images/tg.png" alt="Telegram">
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Rutube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 132 132" fill="none">
+                <g clip-path="url(#clip0_519_2005)">
+                  <rect width="132" height="132" fill="#100943" />
+                  <path
+                    d="M132 66.0001C168.451 66.0001 198 36.4508 198 3.05176e-05C198 -36.4508 168.451 -66 132 -66C95.5492 -66 66 -36.4508 66 3.05176e-05C66 36.4508 95.5492 66.0001 132 66.0001Z"
+                    fill="#ED143B" />
+                  <path
+                    d="M81.5361 62.9865H42.5386V47.5547H81.5361C83.814 47.5547 85.3979 47.9518 86.1928 48.6451C86.9877 49.3385 87.4801 50.6245 87.4801 52.5031V58.0441C87.4801 60.0234 86.9877 61.3094 86.1928 62.0028C85.3979 62.6961 83.814 62.9925 81.5361 62.9925V62.9865ZM84.2115 33.0059H26V99H42.5386V77.5294H73.0176L87.4801 99H106L90.0546 77.4287C95.9333 76.5575 98.573 74.756 100.75 71.7869C102.927 68.8179 104.019 64.071 104.019 57.7359V52.7876C104.019 49.0303 103.621 46.0613 102.927 43.7857C102.233 41.51 101.047 39.5307 99.362 37.7528C97.5824 36.0698 95.6011 34.8845 93.2223 34.0904C90.8435 33.3971 87.8716 33 84.2115 33V33.0059Z"
+                    fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_519_2005">
+                    <rect width="132" height="132" rx="32" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
         </div>
-    </footer>
-    <!-- Bitrix: конец подвала -->
-    
-    <!-- Кнопка наверх -->
-    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
-    
-    <script src="js/main.js"></script>
+
+        <div class="footer__col">
+          <nav class="footer__nav">
+            <ul class="footer__menu">
+              <li>
+                <ul>
+                  <li><a href="#about">О компании</a></li>
+                  <li><a href="#contacts">Контакты</a></li>
+                  <li><a href="#reviews">Отзывы</a></li>
+                  <li><a href="#news">Новости</a></li>
+                  <li><a href="#articles">Статьи</a></li>
+                  <li><a href="#discounts">Акции</a></li>
+                  <li><a href="#faq">Вопрос-ответ</a></li>
+                  <li><a href="#pay">Оплата</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li><a href="#crm">Внедрение CRM</a></li>
+                  <li><a href="#site">Создание сайта</a></li>
+                  <li><a href="#migrate">Перенос сайта</a></li>
+                  <li><a href="#support">Поддержка сайтов</a></li>
+                  <li><a href="#goverments">Решения для государственных организаций</a></li>
+                  <li><a href="#study">Обучение</a></li>
+                  <li><a href="#auto">Автоматизация</a></li>
+                  <li><a href="#intergration">Интеграция и настройка</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="footer__licence">
+            <li>
+              <a href="">
+                1С Битрикс лицензия
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Продление лицензий
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer__partners">
+            <li>
+              <a href="">
+                Для паpтнеров
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Вакансии
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <a class="footer__col" href="">
+          ОКВЭД
+          дополнительная инфа как в реестре
+        </a>
+
+      </div>
+
+      <ul class="footer__bottom">
+        <li>
+          <p>© 2026 Bitroid.<br> Все права защищены.</p>
+        </li>
+        <li>
+          <a href="">
+            Политика конфиденциальности
+          </a>
+        </li>
+        <li>
+          <a href="">
+            Пользовательское соглашение
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+
 </body>
+
 </html>

@@ -1,4 +1,5 @@
 // DOM Elements
+
 document.addEventListener('DOMContentLoaded', function () {
     // Mobile Menu Toggle
     const burgerBtn = document.getElementById('burgerBtn');
@@ -6,19 +7,76 @@ document.addEventListener('DOMContentLoaded', function () {
     const body = document.body;
 
     if (burgerBtn && mainNav) {
-        burgerBtn.addEventListener('click', function () {
-            burgerBtn.classList.toggle('active');
-            mainNav.classList.toggle('active');
-            body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+        let closeBtn = null; // Переменная для хранения крестика
+
+        // Функция создания крестика
+        function createCloseButton() {
+            if (closeBtn) return closeBtn; // Если уже создан, возвращаем
+
+            const btn = document.createElement('button');
+            btn.className = 'mobile-menu-close';
+            btn.innerHTML = '✕';
+            btn.setAttribute('aria-label', 'Закрыть меню');
+            btn.addEventListener('click', closeMenu);
+            return btn;
+        }
+
+        // Функция закрытия меню
+        function closeMenu() {
+            burgerBtn.classList.remove('active');
+            mainNav.classList.remove('active');
+            body.style.overflow = '';
+
+            // Удаляем крестик при закрытии меню
+            if (closeBtn && closeBtn.parentNode) {
+                closeBtn.remove();
+            }
+        }
+
+        // Функция открытия меню
+        function openMenu() {
+            burgerBtn.classList.add('active');
+            mainNav.classList.add('active');
+            body.style.overflow = 'hidden';
+
+            // Добавляем крестик при открытии меню
+            if (!closeBtn) {
+                closeBtn = createCloseButton();
+            }
+            mainNav.insertBefore(closeBtn, mainNav.firstChild);
+        }
+
+        // Открытие/закрытие по бургеру
+        burgerBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+
+            if (mainNav.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
         });
 
+        // Закрытие по ссылкам меню
         const navLinks = mainNav.querySelectorAll('.header__menu-link');
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                burgerBtn.classList.remove('active');
-                mainNav.classList.remove('active');
-                body.style.overflow = '';
-            });
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Закрытие по клику вне меню
+        document.addEventListener('click', function (e) {
+            if (mainNav.classList.contains('active')) {
+                if (!mainNav.contains(e.target) && !burgerBtn.contains(e.target)) {
+                    closeMenu();
+                }
+            }
+        });
+
+        // Закрытие по клавише ESC
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && mainNav.classList.contains('active')) {
+                closeMenu();
+            }
         });
     }
 
@@ -53,22 +111,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const faqItems = document.querySelectorAll('.faq__item');
 
     faqItems.forEach(item => {
-        const question = item.querySelector('.faq__question');
+        const question = item.querySelector('.faq__h3');
 
         question.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-
-            faqItems.forEach(i => i.classList.remove('active'));
-
-            if (!isActive) {
-                item.classList.add('active');
-            }
+            item.classList.toggle('active');
         });
     });
 
     // SWIPER SLIDER
 
-    const swiper = new Swiper('#casesSlider', { 
+    const swiper = new Swiper('#casesSlider', {
         direction: 'horizontal',
 
         // Навигация
@@ -98,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
         speed: 800,
 
         // Эффект перехода
-        effect: 'slide', // slide, fade, cube, coverflow, flip
+        effect: 'slide',
 
         breakpoints: {
 
@@ -125,6 +177,58 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
+    let swiperAudience = null;
+    const swiperContainer = '.audience__swiper';
+
+    // Общая функция инициализации
+    function initSwiperOnMobile(containerSelector, paginationSelector) {
+        let swiperInstance = null;
+
+        const swiperConfig = {
+            direction: 'horizontal',
+            pagination: {
+                el: paginationSelector,
+                clickable: true,
+                dynamicBullets: false,
+            },
+            loop: true,
+            speed: 800,
+            effect: 'slide',
+            slidesPerView: 1,
+            spaceBetween: 25,
+            grabCursor: true,
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+            },
+            mousewheel: {
+                sensitivity: 1,
+                eventsTarget: containerSelector,
+            },
+        };
+
+        const mobileMediaQuery = window.matchMedia('(max-width: 575px)');
+
+        function handleMobileChange(e) {
+            if (e.matches) {
+                if (!swiperInstance) {
+                    swiperInstance = new Swiper(containerSelector, swiperConfig);
+                }
+            } else {
+                if (swiperInstance) {
+                    swiperInstance.destroy(true, true);
+                    swiperInstance = null;
+                }
+            }
+        }
+
+        handleMobileChange(mobileMediaQuery);
+        mobileMediaQuery.addEventListener('change', handleMobileChange);
+    }
+
+    // Инициализация
+    initSwiperOnMobile('.audience__swiper', '.audience__pagination');
+    initSwiperOnMobile('.services-offer__swiper', '.services-offer__pagination');
 
     // ============================================
     // БАЗОВАЯ ВАЛИДАЦИЯ ФОРМЫ
