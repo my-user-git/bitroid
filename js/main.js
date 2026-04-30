@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // FAQ Accordion
+    
     const faqItems = document.querySelectorAll('.faq__item');
 
     faqItems.forEach(item => {
@@ -122,34 +123,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const swiper = new Swiper('#casesSlider', {
         direction: 'horizontal',
-
-        // Навигация
         navigation: {
             nextEl: '.cases__nav--next',
             prevEl: '.cases__nav--prev',
         },
-
-        // Пагинация
         pagination: {
             el: '.cases__pagination',
             clickable: true,
             dynamicBullets: false,
         },
-
-        // Автопрокрутка
-        // autoplay: {
-        //     delay: 5000,
-        //     disableOnInteraction: false,
-        //     pauseOnMouseEnter: true,
-        // },
-
-        // Бесконечный цикл
         loop: true,
-
-        // Скорость анимации
         speed: 800,
-
-        // Эффект перехода
         effect: 'slide',
 
         breakpoints: {
@@ -167,8 +151,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 spaceBetween: 18,
             },
         },
-
-        // Дополнительные опции
         grabCursor: true,
         keyboard: {
             enabled: true,
@@ -184,7 +166,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let swiperAudience = null;
     const swiperContainer = '.audience__swiper';
 
-    // Общая функция инициализации
     function initSwiperOnMobile(containerSelector, paginationSelector) {
         let swiperInstance = null;
 
@@ -234,9 +215,8 @@ document.addEventListener('DOMContentLoaded', function () {
     initSwiperOnMobile('.audience__swiper', '.audience__pagination');
     initSwiperOnMobile('.services-offer__swiper', '.services-offer__pagination');
 
-    // ============================================
     // БАЗОВАЯ ВАЛИДАЦИЯ ФОРМЫ
-    // ============================================
+
     const form = document.getElementById('callbackForm');
 
     if (form) {

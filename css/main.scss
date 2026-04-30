@@ -384,11 +384,23 @@ p {
 /* Hero */
 
 .hero {
+    position: relative;
     padding-top: clamp(80px, 5vw, 200px);
     padding-bottom: clamp(77px, 5vw, 188px);
-    background: url(../images/hero/hero-bg-1.png) no-repeat left center, url(../images/hero/hero-bg-2.png) no-repeat right center;
-    background-size: contain, contain;
     overflow: visible;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -20vh;
+        background: url(../images/hero/hero-bg-1.png) no-repeat left center, url(../images/hero/hero-bg-2.png) no-repeat right center;
+        background-size: contain;
+        pointer-events: none;
+        z-index: -1;
+    }
 
     @media(max-width:576px) {
         background: url(../images/hero/hero-bg-1.png) no-repeat top center, url(../images/hero/hero-bg-2.png) no-repeat center 157%;
@@ -470,6 +482,13 @@ p {
         font-size: 16px;
         line-height: 110%;
         color: var(--brand-dark);
+        transition: color .3s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--brand-green);
+        }
     }
 }
 
@@ -477,10 +496,25 @@ p {
 /* Audience */
 
 .audience {
-    padding-top: clamp(60px, 3vw, 150px);
-    padding-bottom: clamp(60px, 3vw, 150px);
+    position: relative;
+    padding-top: clamp(60px, 5vw, 150px);
+    padding-bottom: clamp(60px, 5vw, 150px);
     background: url(../images/audience/audience-bg.png) no-repeat center bottom;
     background-size: contain;
+    z-index: 1;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -20vh;
+        background: url(../images/audience/audience-bg.png) no-repeat left bottom;
+        background-size: contain;
+        pointer-events: none;
+        z-index: -1;
+    }
 
     &__h2 {
         margin-bottom: clamp(30px, 5vw, 60px);
@@ -568,26 +602,6 @@ p {
         width: 100%;
         height: 100%;
         object-fit: contain;
-    }
-
-    &__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-
-        & span {
-            width: 10px;
-            height: 10px;
-            margin: 0;
-            background-color: var(--white);
-            opacity: 1;
-
-            &.swiper-pagination-bullet-active {
-                background-color: var(--brand-green);
-            }
-        }
     }
 }
 
@@ -704,10 +718,23 @@ p {
 
 
 .cases {
+    position: relative;
     padding-top: 150px;
     padding-bottom: 150px;
-    background: url(../images/cases/cases-bg.png) no-repeat left bottom;
-    background-size: contain;
+    z-index: 1;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -20vh;
+        background: url(../images/cases/cases-bg.png) no-repeat left bottom;
+        background-size: contain;
+        pointer-events: none;
+        z-index: -1;
+    }
 
     &__all {
 
@@ -751,7 +778,7 @@ p {
     &__slide {
         display: grid;
         grid-template-columns: 1fr;
-        padding: clamp(75px, 3vw, 145px) clamp(16px, 3vw, 24px) clamp(16px, 3vw, 20px) clamp(16px, 3vw, 20px);
+        padding: clamp(75px, 5vw, 145px) clamp(16px, 5vw, 24px) clamp(16px, 5vw, 20px) clamp(16px, 5vw, 20px);
         border-radius: 30px;
         box-shadow: 0 4px 25px 0 rgba(1, 8, 3, 0.08);
         background-color: var(--white);
@@ -764,7 +791,7 @@ p {
             background-size: cover;
 
             @media(max-width:768px) {
-                padding: clamp(75px, 3vw, 145px) clamp(16px, 3vw, 24px) clamp(16px, 3vw, 20px) clamp(16px, 3vw, 20px);
+                padding: clamp(75px, 5vw, 145px) clamp(16px, 5vw, 24px) clamp(16px, 5vw, 20px) clamp(16px, 5vw, 20px);
             }
 
             & h3,
@@ -789,7 +816,7 @@ p {
         order: 2;
         font-family: var(--font-family-regular);
         font-weight: 600;
-        font-size: clamp(16px, 3vw, 24px);
+        font-size: clamp(16px, 5vw, 24px);
         line-height: 130%;
         color: var(--brand-dark);
     }
@@ -871,20 +898,6 @@ p {
         justify-content: center;
         gap: 8px;
     }
-
-    &__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
-        width: 10px;
-        height: 10px;
-        margin: 0;
-        border-radius: 50%;
-        background-color: var(--white);
-        opacity: 1;
-        transition: all 0.3s ease;
-    }
-
-    &__pagination.swiper-pagination-bullets .swiper-pagination-bullet-active {
-        background: var(--brand-green);
-    }
 }
 
 /* FAQ */
@@ -905,6 +918,13 @@ p {
         font-size: 16px;
         line-height: 110%;
         color: var(--brand-dark);
+        transition: color .3s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--brand-green);
+        }
 
         @media(max-width:768px) {
             display: none;
@@ -939,7 +959,7 @@ p {
             text-align: left;
             font-family: var(--font-family-regular);
             font-weight: 400;
-            font-size: clamp(16px, 3vw, 18px);
+            font-size: clamp(16px, 5vw, 18px);
             line-height: 130%;
             color: var(--brand-dark);
             transition: color .3s ease-in-out;
@@ -959,15 +979,32 @@ p {
     }
 
     &__wrap {
+        position: relative;
         display: grid;
         grid-template-columns: 52.7% 1fr;
-        background: url(../images/faq/faq-bg.png) no-repeat right top;
-        background-size: 40%;
+        overflow: visible;
+        z-index: 1;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: -8vh;
+            left: 0;
+            right: 0;
+            bottom: -20vh;
+            background: url(../images/faq/faq-bg.png) no-repeat right top;
+            background-size: 40%;
+            pointer-events: none;
+            z-index: -1;
+
+            @media(max-width: 768px) {
+                background: none;
+            }
+        }
 
         @media(max-width: 768px) {
             grid-template-columns: 1fr;
             margin-bottom: 40px;
-            background: none;
         }
     }
 
@@ -1012,7 +1049,7 @@ p {
         padding: 0;
         font-family: var(--font-family-regular);
         font-weight: 400;
-        font-size: clamp(14px, 3vw, 16px);
+        font-size: clamp(14px, 5vw, 16px);
         line-height: 130%;
         color: var(--brand-dark);
         overflow: hidden;
@@ -1054,7 +1091,7 @@ p {
         margin-bottom: 20px;
         font-family: var(--font-family-regular);
         font-weight: 600;
-        font-size: clamp(20px, 3vw, 40px);
+        font-size: clamp(20px, 5vw, 40px);
         color: var(--brand-dark);
     }
 
@@ -1062,7 +1099,7 @@ p {
         margin-bottom: 63px;
         font-family: var(--font-family-regular);
         font-weight: 400;
-        font-size: clamp(16px, 3vw, 18px);
+        font-size: clamp(16px, 5vw, 18px);
         line-height: 130%;
         color: var(--brand-dark);
     }

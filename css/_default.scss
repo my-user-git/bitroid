@@ -158,3 +158,28 @@ input[type=checkbox]:checked+.checkmark {
   transform: scale(1.1);
   color: #000;
 }
+
+/* slider pagination */
+
+.default {
+
+  &-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    & span {
+        width: 10px;
+        height: 10px;
+        margin: 0;
+        background-color: var(--white);
+        opacity: 1;
+
+        &.swiper-pagination-bullet-active {
+            background-color: var(--brand-green);
+        }
+    }
+}
+}
