@@ -402,11 +402,6 @@ p {
         z-index: -1;
     }
 
-    @media(max-width:576px) {
-        background: url(../images/hero/hero-bg-1.png) no-repeat top center, url(../images/hero/hero-bg-2.png) no-repeat center 157%;
-        background-size: contain, 70%;
-    }
-
     &__content {
         display: flex;
         flex-direction: column;
